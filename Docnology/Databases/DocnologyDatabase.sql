@@ -65,6 +65,8 @@ CREATE TABLE `messages` (
 CREATE TABLE `appointment`(
     `pID` int (11) NOT NULL AUTO_INCREMENT,
     `dID` int (11) NOT NULL AUTO_INCREMENT,
+    `phone_number` varchar (10) NOT NULL,
+    `application_description` char (255) NOT NULL,
 
 
 
