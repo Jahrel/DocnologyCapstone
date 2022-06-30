@@ -21,7 +21,7 @@
 
     $certification = $_FILES['certificate']['name'];
     $cert_temp = $_FILES['certificate']['tmp_name'];
-    $cert_folder = "C:/xampp\Doc\htdocs\Docnology\Certificates/" . $certification;
+    $cert_folder = "C:/xampp\Doc\htdocs\DocnologyCapstone\Docnology\Certificates/" . $certification;
     if (move_uploaded_file($cert_temp, $cert_folder)) {
       echo "<script>console.log('Certificate Uploaded');</script>";
     } else {
@@ -32,7 +32,7 @@
 
     $filename = $_FILES["img"]["name"];
     $tempname = $_FILES["img"]["tmp_name"];
-    $folder = "C:/xampp\Doc\htdocs\Docnology\Images\img/" . $filename;
+    $folder = "C:/xampp\Doc\htdocs\DocnologyCapstone\Docnology\Images\img/" . $filename;
 
     if (move_uploaded_file($tempname, $folder)) {
       echo "<script>console.log('Image Uploaded');</script>";
