@@ -1,4 +1,5 @@
 <html>
+    <link rel="stylesheet" href="../Styles/patient landing.css">
     <img src="../Images/img/shape.png" alt="" class="shape">
 
             <header>
