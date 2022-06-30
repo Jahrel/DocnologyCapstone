@@ -14,9 +14,9 @@ if(isset($_POST['login_btn'])){
 		$sql_two = "SELECT * FROM patients WHERE id=" . $user_info["id"] . "";
 		$patient = $conn->query($sql_two);
 		if ($result->num_rows>0){
-			echo "<script> window.location.href = '../Pages/patientlanding.html'; </script>";
+			echo "<script> window.location.href = 'patientlanding.php'; </script>";
 		} else {
-			echo "<script> window.location.href = '../Pages/docdashboard.html'; </script>";
+			echo "<script> window.location.href = 'docdashboard.php'; </script>";
 		}
     }else{
         echo "<script>alert('Invalid Details');</script>";

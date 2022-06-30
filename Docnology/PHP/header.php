@@ -16,7 +16,7 @@
                     <div class="links">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="patient-profile.php">Profile</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Testimonials</a></li>
                             <li><a href="Signup.php" class="btn">Sign up</a></li>
