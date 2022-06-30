@@ -1,5 +1,5 @@
 <html>
-    <link rel="stylesheet" href="../Styles/patient landing.css">
+    <link rel="stylesheet" href="../Styles/Index.css">
     <img src="../Images/img/shape.png" alt="" class="shape">
     <div class="big-wrapper light">
             <img src="../Images/img/shape.png" alt="" class="shape">
