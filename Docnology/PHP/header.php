@@ -1,7 +1,7 @@
 <html>
     <link rel="stylesheet" href="../Styles/patient landing.css">
     <img src="../Images/img/shape.png" alt="" class="shape">
-
+        <main>
             <header>
                 <div class="container">
                     <div class="logo">
@@ -28,4 +28,5 @@
                     </div>
                 </div>
             </header>
+        </main>
 </html>
