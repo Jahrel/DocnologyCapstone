@@ -1,7 +1,9 @@
 <html>
     <link rel="stylesheet" href="../Styles/patient landing.css">
     <img src="../Images/img/shape.png" alt="" class="shape">
-        <main>
+    <div class="big-wrapper light">
+            <img src="../Images/img/shape.png" alt="" class="shape">
+
             <header>
                 <div class="container">
                     <div class="logo">
@@ -12,12 +14,10 @@
                     <div class="links">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="../PHP/patient-profile.php">Profile</a></li>
-                            <li><a href="#">Chat Room</a></li>
-                            <li><a href="../PHP/appointment.php">Appointments</a></li>
-                            <li><a href="#">My History</a></li>
-                            <li><a href="#">Make payment</a></li>
-                            <li><a href="Signup.html" class="btn">Log Out</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="Signup.php" class="btn">Sign up</a></li>
                         </ul>
                     </div>
 
@@ -28,5 +28,4 @@
                     </div>
                 </div>
             </header>
-        </main>
 </html>
