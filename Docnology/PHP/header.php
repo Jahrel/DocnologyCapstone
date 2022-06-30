@@ -1,6 +1,8 @@
 <html>
+    <head>
     <link rel="stylesheet" href="../Styles/Index.css">
-    <img src="../Images/img/shape.png" alt="" class="shape">
+    </head>
+    <body>
     <div class="big-wrapper light">
             <img src="../Images/img/shape.png" alt="" class="shape">
 
@@ -28,4 +30,6 @@
                     </div>
                 </div>
             </header>
+    </body>
+    
 </html>
