@@ -48,16 +48,8 @@
 
       <fieldset>
         <legend><span class="number">2</span>Appointment Details</legend>
-        <label for="appointment_for">Appointment for*:</label>
-        <select id="appointment_for" name="appointment_for" required>
-          <option value="coffee">Coffee</option>
-          <option value="meeting">Meeting</option>
-          <option value="Business">Business</option>
-          <option value="lunch">Lunch</option>
-          <option value="skype">Skype</option>
-          <option value="movie">Movie</option>
-          <option value="couple_date">Date</option>
-        </select>
+        <label for="time">Doctor:</label>
+        <input type="text" name="doctor" value="" placeholder="Enter Doctor's Name" required></input>
         <label for="appointment_description">Appointment Description:</label>
         <textarea id="appointment_description" name="appointment_description" placeholder="I wish to get an appointment to skype for resolving a software problem."></textarea>
         <label for="date">Date*:</label>
@@ -67,7 +59,7 @@
         <input type="time" name="time" value="" required></input>
         <br>
       </fieldset>
-      <button type="submit">Request For Appointment</button>
+      <button type="submit">Set Appointment</button>
     </form>
   </div>
 </body>

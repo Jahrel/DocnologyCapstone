@@ -1,4 +1,4 @@
-<?php
+ <?php
     require("dbconnect.php");
 
     
@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="../Styles/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/doctors.css">
 </head>
 <style>
     /* remember you can change the colour for stuff as well as the font and placemnt. id advise you to do so */
@@ -66,7 +67,37 @@
         color: red;
         cursor: pointer;
     }
+    
 
+    img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 220px;
+        height:200px;
+        
+    }
+    .col {
+        float:left;
+        width:33.33%;
+        padding:5px;
+    }
+    .r::after {
+        content:"";
+        display: table;
+        clear:both;
+
+    }
+    .doc{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    label{
+
+        positioon :center;
+    }
+  
    
 </style>
 
@@ -79,7 +110,6 @@
     only thing you'd have to do is tailor the prepared statement above and add another if statement and check which button is set 
     and run the query based on that -->
     <form action="../PHP/doctors.php" method="POST">
-        <div class="row">
             <div class="form-group">
                 <label class="control-label" for="search-box"><b>Search For Doctor</b></label>
                 <div>
@@ -88,20 +118,23 @@
                 <div>
                 <button type="submit" name="search" class="btn btn-success">Search</button>
                 </div>
-            </div>
-        </div>
+            </div> 
     </form>
     <div>
         <h1>List of Doctors</h1>
     </div>
-    <div>
+    <div class="doc">
     <?php if ($result->num_rows > 0): ?>
         <?php session_start();?>
         
         <?php while($doctor = $result->fetch_assoc()): ?>
             <?php $availability=json_decode($doctor['availability'],true);?>
-                <div>
-                    <img src="../Images/img/<?php echo $doctor['image'];?>" >
+                <div class ="final">
+                    <div class ="r">
+                        <div class ="col">
+                            <img src="../Images/img/<?php echo $doctor['image'];?>" >
+                        </div>
+                    </div>
                     <h4><?php echo $doctor['fullname'];?></h4>
                     <span>Specialization: <?php echo $doctor['specialty'];?></span>
                     
