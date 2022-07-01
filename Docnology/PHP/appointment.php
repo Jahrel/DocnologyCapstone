@@ -5,7 +5,7 @@
     $info = $_POST['appointment_description'];
     $number = $_POST['tel'];
     
-    $sql = "INSERT INTO appointment(phone_number, msg) VALUES ($number, $info)";
+    $sql = "INSERT INTO appointment(phone_number, application_description) VALUES ($number, $info)";
     $conn->query($sql);
     
   }
