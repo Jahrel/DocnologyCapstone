@@ -20,7 +20,7 @@
         $conn->query($sql);
         $conn->close();
         echo"<script>alert('Successfully Registered')</script>";
-        echo"<script>window.location.href='../Pages/docdashboard.html'</script>";
+        echo"<script>window.location.href='docdashboard.php'</script>";
     }
 ?>
 

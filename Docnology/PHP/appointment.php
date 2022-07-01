@@ -1,7 +1,13 @@
 <?php
 
   if (isset($_POST['appointment_btn'])){
-    $doctorid = $_POST['appointment_btn']; //use this doctor id to store the appointment information in the database
+    //$doctorid = $_POST['appointment_btn']; //use this doctor id to store the appointment information in the database
+    $info = $_POST['appointment_description'];
+    $number = $_POST['tel'];
+    
+    $sql = "INSERT INTO appointment(phone_number, msg) VALUES ($number, $info)";
+    $conn->query($sql);
+    
   }
 
   // okay so create an appointments table in your database that will accept the following:
@@ -30,17 +36,17 @@
       <h1>Appointment Request Form</h1>
       
     </div>
-    <form action="index.html" method="post">
+    <form action="appointment.php" method="post">
       <fieldset>
         <legend><span class="number">1</span>Your basic details</legend>
         <label for="name">Name*:</label>
-        <input type="text" id="name" name="user_name" placeholder="Atchyut (only first names)" required pattern="[a-zA-Z0-9]+">
+        <input type="text" id="name" name="user_name" value="<?php echo $name;?>" required pattern="[a-zA-Z0-9]+">
 
         <label for="mail">Email*:</label>
-        <input type="email" id="mail" name="user_email" placeholder="abc@xyz.com" required>
+        <input type="email" id="mail" name="user_email" value="<?php echo $email;?>" required>
 
         <label for="tel">Contact Num:</label>
-        <input type="tel" id="tel" placeholder="Include country code" name="user_num">
+        <input type="tel" id="tel" value="<?php echo $email;?>" name="user_num">
 
         <input type="hidden" id="doctorid" name="doctorid" value="<?php echo $doctorid;?>"/>
 
@@ -49,7 +55,7 @@
       <fieldset>
         <legend><span class="number">2</span>Appointment Details</legend>
         <label for="time">Doctor:</label>
-        <input type="text" name="doctor" value="" placeholder="Enter Doctor's Name" required></input>
+        <input type="text" name="doctor" value="<?php echo $docname;?>" required></input>
         <label for="appointment_description">Appointment Description:</label>
         <textarea id="appointment_description" name="appointment_description" placeholder="I wish to get an appointment to skype for resolving a software problem."></textarea>
         <label for="date">Date*:</label>

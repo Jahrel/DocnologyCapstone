@@ -88,7 +88,7 @@
 
 // to here
     echo "<script> alert('Application pending approval. You will be notified once approved') </script>";
-    echo "<script> window.location.href='../Pages/Index.html' </script>";
+    echo "<script> window.location.href='Index.php' </script>";
 
     $conn->close();
   }
